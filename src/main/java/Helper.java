@@ -8,7 +8,7 @@ public class Helper {
 
         Set<String> futureWords = new HashSet<String>(source);
 
-        ListIterator<String> inputIt = input.listIterator();
+        Iterator<String> inputIt = input.iterator();
 
         String next = inputIt.next();
 

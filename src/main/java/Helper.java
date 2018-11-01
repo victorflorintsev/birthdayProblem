@@ -24,7 +24,7 @@ public class Helper {
                 }
                 next = inputIt.next();
             }
-            if (!inputIt.hasNext() && !s.equals(next)) missing.add(s);
+            if (!inputIt.hasNext() && !s.equals(next)) missing.add(s); // end of input list
         }
 
         return missing;

@@ -5,11 +5,28 @@ import static org.assertj.core.api.Assertions.*;
 import java.util.Arrays;
 
 public class HelperTest {
+    @Test
+    public void testStupid() {
+        assertThat(Helper.func("a ab def trash z ju b c d", "j z c b"))
+                .containsExactly("j", "c");
+    }
+
+    @Test
+    public void hackerrankTest() {
+        assertThat(Helper.func("h a a c c k k e r r a n n k k", "h a c k e r r a n k"))
+                .isEmpty();
+    }
+
+    @Test
+    public void hackerrankTest2() {
+        assertThat(Helper.func("h c c a a k k e r r a n n k k", "h a c k e r r a n k"))
+                .contains("a");
+    }
 
     @Test
     public void test1() {
-        assertThat(Helper.func("a b c a b c d e f", "o b c d z e j f o"))
-                .containsExactly("o", "z", "j", "o");
+        assertThat(Helper.func("a b c a b c d e f", "o o b c d z e j f o"))
+                .containsExactly("o", "o", "z", "j", "o");
     }
 
     @Test
